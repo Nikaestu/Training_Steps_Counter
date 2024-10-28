@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		026A67822C733E3500345652 /* stepsCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67812C733E3500345652 /* stepsCounterApp.swift */; };
-		026A67842C733E3500345652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67832C733E3500345652 /* ContentView.swift */; };
+		026A67822C733E3500345652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67812C733E3500345652 /* ContentView.swift */; };
 		026A67862C733E3600345652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026A67852C733E3600345652 /* Assets.xcassets */; };
 		026A67892C733E3600345652 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026A67882C733E3600345652 /* Preview Assets.xcassets */; };
 		026A67932C733E3700345652 /* stepsCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67922C733E3700345652 /* stepsCounterTests.swift */; };
 		026A679D2C733E3700345652 /* stepsCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A679C2C733E3700345652 /* stepsCounterUITests.swift */; };
 		026A679F2C733E3700345652 /* stepsCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A679E2C733E3700345652 /* stepsCounterUITestsLaunchTests.swift */; };
+		026A67AC2C733E7900345652 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67AB2C733E7900345652 /* Counter.swift */; };
+		026A67AF2C733EF300345652 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67AE2C733EF300345652 /* CounterViewModel.swift */; };
+		026A67B32C7342E500345652 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67B22C7342E500345652 /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +37,7 @@
 
 /* Begin PBXFileReference section */
 		026A677E2C733E3500345652 /* stepsCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stepsCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		026A67812C733E3500345652 /* stepsCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsCounterApp.swift; sourceTree = "<group>"; };
-		026A67832C733E3500345652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		026A67812C733E3500345652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		026A67852C733E3600345652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026A67882C733E3600345652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		026A678E2C733E3700345652 /* stepsCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stepsCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,9 @@
 		026A67982C733E3700345652 /* stepsCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stepsCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026A679C2C733E3700345652 /* stepsCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsCounterUITests.swift; sourceTree = "<group>"; };
 		026A679E2C733E3700345652 /* stepsCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		026A67AB2C733E7900345652 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		026A67AE2C733EF300345652 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
+		026A67B22C7342E500345652 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,9 @@
 		026A67802C733E3500345652 /* stepsCounter */ = {
 			isa = PBXGroup;
 			children = (
-				026A67812C733E3500345652 /* stepsCounterApp.swift */,
-				026A67832C733E3500345652 /* ContentView.swift */,
+				026A67B12C7342D000345652 /* View */,
+				026A67B02C733EFF00345652 /* ViewModel */,
+				026A67AD2C733E7E00345652 /* Model */,
 				026A67852C733E3600345652 /* Assets.xcassets */,
 				026A67872C733E3600345652 /* Preview Content */,
 			);
@@ -125,6 +130,31 @@
 				026A679E2C733E3700345652 /* stepsCounterUITestsLaunchTests.swift */,
 			);
 			path = stepsCounterUITests;
+			sourceTree = "<group>";
+		};
+		026A67AD2C733E7E00345652 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				026A67AB2C733E7900345652 /* Counter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		026A67B02C733EFF00345652 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				026A67AE2C733EF300345652 /* CounterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		026A67B12C7342D000345652 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				026A67812C733E3500345652 /* ContentView.swift */,
+				026A67B22C7342E500345652 /* CounterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026A67842C733E3500345652 /* ContentView.swift in Sources */,
-				026A67822C733E3500345652 /* stepsCounterApp.swift in Sources */,
+				026A67822C733E3500345652 /* ContentView.swift in Sources */,
+				026A67AF2C733EF300345652 /* CounterViewModel.swift in Sources */,
+				026A67AC2C733E7900345652 /* Counter.swift in Sources */,
+				026A67B32C7342E500345652 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct stepsCounterApp: App {
+struct ContentView: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CounterView()
         }
     }
 }

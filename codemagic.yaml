@@ -1,0 +1,21 @@
+workflows:
+  ios-spm-build:
+    name: iOS SPM Build
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Resolve Swift Packages
+        script: |
+          xcodebuild -resolvePackageDependencies
+
+      - name: Build the iOS app using xcodebuild
+        script: |
+          xcodebuild -project stepsCounter.xcodeproj \
+                     -scheme stepsCounter \
+                     -sdk iphoneos \
+                     -configuration Release \
+                     build CODE_SIGNING_ALLOWED=NO
+
+    artifacts:
+      - build/**/*.app

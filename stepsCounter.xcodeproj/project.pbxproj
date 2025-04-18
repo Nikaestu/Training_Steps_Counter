@@ -16,6 +16,8 @@
 		026A67AC2C733E7900345652 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67AB2C733E7900345652 /* Counter.swift */; };
 		026A67AF2C733EF300345652 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67AE2C733EF300345652 /* CounterViewModel.swift */; };
 		026A67B32C7342E500345652 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A67B22C7342E500345652 /* CounterView.swift */; };
+		02E2DE3A2DB283580075F850 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 02E2DE382DB283580075F850 /* codemagic.yaml */; };
+		02E2DE3B2DB283580075F850 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02E2DE392DB283580075F850 /* exportOptions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		026A67AB2C733E7900345652 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		026A67AE2C733EF300345652 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 		026A67B22C7342E500345652 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		02E2DE382DB283580075F850 /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
+		02E2DE392DB283580075F850 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = exportOptions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 		026A67752C733E3500345652 = {
 			isa = PBXGroup;
 			children = (
+				02E2DE382DB283580075F850 /* codemagic.yaml */,
+				02E2DE392DB283580075F850 /* exportOptions.plist */,
 				026A67802C733E3500345652 /* stepsCounter */,
 				026A67912C733E3700345652 /* stepsCounterTests */,
 				026A679B2C733E3700345652 /* stepsCounterUITests */,
@@ -262,6 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				026A67892C733E3600345652 /* Preview Assets.xcassets in Resources */,
+				02E2DE3A2DB283580075F850 /* codemagic.yaml in Resources */,
+				02E2DE3B2DB283580075F850 /* exportOptions.plist in Resources */,
 				026A67862C733E3600345652 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

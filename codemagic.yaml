@@ -1,6 +1,6 @@
 workflows:
-  ios-spm-build:
-    name: iOS SPM Build
+  ios-build-ipa:
+    name: iOS Build IPA
     max_build_duration: 60
     environment:
       xcode: latest
@@ -9,13 +9,22 @@ workflows:
         script: |
           xcodebuild -resolvePackageDependencies
 
-      - name: Build the iOS app using xcodebuild
+      - name: Build and Archive
         script: |
-          xcodebuild -project stepsCounter.xcodeproj \
-                     -scheme stepsCounter \
-                     -sdk iphoneos \
-                     -configuration Release \
-                     build CODE_SIGNING_ALLOWED=NO
+          xcodebuild \
+            -project stepsCounter.xcodeproj \
+            -scheme stepsCounter \
+            -sdk iphoneos \
+            -configuration Release \
+            -archivePath $CM_BUILD_DIR/build/Training_Steps_Counter.xcarchive \
+            archive
+
+      - name: Export IPA
+        script: |
+          xcodebuild -exportArchive \
+            -archivePath $CM_BUILD_DIR/build/Training_Steps_Counter.xcarchive \
+            -exportOptionsPlist exportOptions.plist \
+            -exportPath $CM_BUILD_DIR/build/ipa
 
     artifacts:
-      - build/**/*.app
+      - build/ipa/*.ipa
